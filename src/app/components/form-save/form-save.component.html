@@ -1,0 +1,20 @@
+<form padding [formGroup]="formG">
+  <ion-item>
+    <ion-label>Tipo de meta</ion-label>
+    <ion-select placeholder="Seleccionar tipo" formControlName="tipoMeta" [(ngModel)]="objMetas.tipoMeta">
+      <ion-select-option *ngFor="let tipo of tipoMetas" value="{{tipo.des}}">{{tipo.des}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Monto Ahorrar</ion-label>
+    <ion-input type="text" numbersOnly formControlName="montoAhorrar" [(ngModel)]="objMetas.montoAhorrar"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Fecha</ion-label>
+    <ion-datetime displayFormat="DD/MM/YYYY" formControlName="fecha" [(ngModel)]="objMetas.fecha"
+      placeholder="Select Date"></ion-datetime>
+  </ion-item>
+  <ion-button expand="block" [disabled]="formG.invalid" color="success" (click)="save()">{{isSave ? 'Guardar' :
+    'Actualizar'}}
+  </ion-button>
+</form>

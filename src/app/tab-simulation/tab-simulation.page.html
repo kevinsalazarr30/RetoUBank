@@ -1,0 +1,59 @@
+<ion-toolbar class="toolbarGlobal">
+  <ion-title class="textHeader">
+    Simulacion -<b class="colorG"></b>
+  </ion-title>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size-md="6" offset-md="3">
+        <ion-card *ngFor="let item of listReglas; let i = index ">
+          <ion-item>
+            <ion-label class="textHeader">
+              <b class="colorG"># Meta - </b> {{item.meta}}
+            </ion-label>
+          </ion-item>
+          <ion-card-content>
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>Tipo de regla :</em>
+              <p>Pasion futbolera</p>
+            </ion-row>
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>Fecha : </em>
+              <p>{{item.fecha | date : 'dd/MM/yyyy'}}</p>
+            </ion-row>
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>Equipo : </em>
+              <p>{{item.equipo}}</p>
+            </ion-row>
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>E. contrario : </em>
+              <p>{{item.equipoContrario}}</p>
+            </ion-row>
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>Evento : </em>
+              <p>{{item.evento}}</p>
+            </ion-row>
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>Ahorro : </em>
+              <p>${{item.montoAhorrar}}</p>
+            </ion-row>
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>Ocurrio : </em>
+              <p>{{item.eventoSuccess}}</p>
+            </ion-row>
+            <br>
+            <ion-row class="ion-align-items-center ">
+              <em *ngIf="item.evento === 'Jugar'">${{ item.montoAhorrar * item.eventoSuccess }} ahorrado por jugar
+                contra {{item.equipoContrario}} el día {{item.fecha | date : 'dd/MM/yyyy' }}</em>
+              <em *ngIf="item.evento === 'Ganar'">${{ item.montoAhorrar * item.eventoSuccess }} ahorrado por ganar
+                contra {{item.equipoContrario}} el día {{ item.fecha | date : 'dd/MM/yyyy' }}</em>
+              <em *ngIf="item.evento === 'Goles'">${{ item.montoAhorrar * item.eventoSuccess }} por anotar
+                {{item.eventoSuccess}} contra {{item.equipoContrario}} el día {{item.fecha| date : 'dd/MM/yyyy'}}</em>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

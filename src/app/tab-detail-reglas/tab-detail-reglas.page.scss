@@ -1,0 +1,42 @@
+ion-content {
+    --offset-bottom: -70px !important;
+
+    ion-spinner {
+        width: 100%;
+        height: 15%;
+        margin-top: 50%;
+    }
+
+    .text3 {
+        font-family: "Montserrat Regular";
+        color: #b6b6b6;
+        font-size: 12px;
+        margin: 3px 0px;
+    }
+}
+#map {
+    height: 50%;
+}
+.segmentContent {
+    display: flex;
+    font-family: "Montserrat SemiBold";
+    font-size: 13px;
+    align-items: baseline;
+    justify-content: space-evenly;
+    // text-transform: uppercase;
+    letter-spacing: 0.2em;
+
+    .border {
+        height: 4px;
+        position: absolute;
+        width: 43px;
+        background: #d74246;
+        bottom: 0px;
+    }
+
+    .disabled {
+        color: #cecfd3;
+        font-size: 10px;
+        padding: 10px;
+    }
+}

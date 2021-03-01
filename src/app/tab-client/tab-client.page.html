@@ -1,0 +1,13 @@
+<ion-toolbar class="toolbarGlobal">
+  <ion-title class="textHeader">
+    Metas -<b class="colorG">Ubank</b>
+  </ion-title>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-fab vertical="center" horizontal="end" slot="fixed" (click)="newMeta()">
+    <ion-fab-button color="danger">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <app-list-card [list]="listMetas" [isMeta] = "true" (emitDetail)="goToDetail($event)"></app-list-card>
+</ion-content>

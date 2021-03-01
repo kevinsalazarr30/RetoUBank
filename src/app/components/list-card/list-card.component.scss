@@ -1,0 +1,27 @@
+ion-card {
+    ion-icon {
+        color: #d74346;
+        cursor: pointer;
+    }
+}
+
+.textHeader {
+    font-family: "Montserrat Regular";
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    // color: #6b76e8;
+    .colorG {
+        color: #d74346;
+    }
+}
+p {
+    margin-top: 10px;
+    font-family: "Montserrat Regular";
+    color: #222428e6;
+    width: 70%;
+    text-align: end;
+}
+em {
+    font-size: 12px;
+    font-family: "Montserrat Regular";
+}

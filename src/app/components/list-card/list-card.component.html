@@ -1,0 +1,58 @@
+<ion-grid>
+  <ion-row>
+    <ion-col size-md="6" offset-md="3">
+      <ion-card *ngFor="let item of list; let i = index ">
+        <ion-item>
+          <ion-icon name="arrow-forward-outline" slot="end" (click)="goToDetail(item)"></ion-icon>
+          <ion-label class="textHeader">
+            <b class="colorG">#{{isMeta ? (i + 1) : "Meta"}} - </b> {{isMeta ? "Meta" : item.meta}}
+          </ion-label>
+        </ion-item>
+        <ion-card-content>
+          <div *ngIf="isMeta">
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>Tipo de meta :</em>
+              <p>{{item.tipoMeta}}</p>
+            </ion-row>
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>Fecha : </em>
+              <p>{{item.fecha | date : 'dd/MM/yyyy'}}</p>
+            </ion-row>
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>Monto Ahorrar : </em>
+              <p>$ {{item.montoAhorrar }}</p>
+            </ion-row>
+          </div>
+          <div *ngIf="!isMeta">
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>Tipo de regla :</em>
+              <p>Pasion futbolera</p>
+            </ion-row>
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>Fecha : </em>
+              <p>{{item.fecha | date : 'dd/MM/yyyy'}}</p>
+            </ion-row>
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>Equipo : </em>
+              <p>{{item.equipo}}</p>
+            </ion-row>
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>E. contrario : </em>
+              <p>{{item.equipoContrario}}</p>
+            </ion-row>
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>Monto Ahorro : </em>
+              <p>{{item.montoAhorrar}}</p>
+            </ion-row>
+            <ion-row class="ion-align-items-center ion-justify-content-between">
+              <em>Evento : </em>
+              <p>{{item.evento}}</p>
+            </ion-row>
+          </div>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+  </ion-row>
+</ion-grid>

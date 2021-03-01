@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "850049666802",
+    "firebase_url": "https://notiffragola.firebaseio.com",
+    "project_id": "notiffragola",
+    "storage_bucket": "notiffragola.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850049666802:android:a77a66c4542cd1ebe24a6b",
+        "android_client_info": {
+          "package_name": "com.appfragola"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850049666802-8o224hmqanjtcg614eoti1froo6bbf0a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAb4oa_lhoFQCLTX1jcd4y8X1YveXDniWc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850049666802-8o224hmqanjtcg614eoti1froo6bbf0a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

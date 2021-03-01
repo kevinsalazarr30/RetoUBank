@@ -1,0 +1,7 @@
+{
+  "name": "appFragola",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,13 @@
+<ion-toolbar class="toolbarGlobal">
+  <ion-title class="textHeader">
+    Reglas -<b class="colorG">Ubank</b>
+  </ion-title>
+</ion-toolbar>
+<ion-content [fullscreen]="true">
+  <ion-fab vertical="center" horizontal="end" slot="fixed" (click)="newReglas()">
+    <ion-fab-button color="danger">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <app-list-card [list]="listReglas" [isMeta] = "false" (emitDetail)="goToDetail($event)"></app-list-card>
+</ion-content>

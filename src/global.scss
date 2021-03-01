@@ -1,0 +1,134 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import "~@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: "Montserrat Medium";
+    src: url("./assets/fonts/Montserrat/Montserrat-Medium.ttf"); //mine
+}
+@font-face {
+    font-family: "Montserrat Regular";
+    src: url("./assets/fonts/Montserrat/Montserrat-Regular.ttf"); //mine
+}
+
+@font-face {
+    font-family: "Montserrat Bold";
+    src: url("./assets/fonts/Montserrat/Montserrat-Bold.ttf"); //mine
+}
+@font-face {
+    font-family: "Montserrat SemiBold";
+    src: url("./assets/fonts/Montserrat/Montserrat-SemiBold.ttf"); //mine
+}
+
+@font-face {
+    font-family: "Montserrat ExtraBold";
+    src: url("./assets/fonts/Montserrat/Montserrat-ExtraBold.ttf"); //mine
+}
+@font-face {
+    font-family: "Montserrat ExtraBoldItalic";
+    src: url("./assets/fonts/Montserrat/Montserrat-ExtraBoldItalic.ttf"); //mine
+}
+
+@font-face {
+    font-family: "Montserrat MediumItalic";
+    src: url("./assets/fonts/Montserrat/Montserrat-MediumItalic.ttf"); //mine
+}
+
+.toolbarGlobal {
+    padding: 5px 0px;
+    .textHeader {
+        font-family: "Montserrat Regular";
+        font-size: 17px;
+        letter-spacing: 0.4em;
+        // color: #6b76e8;
+    }
+    .textHeaderDet {
+        font-family: "Montserrat SemiBold";
+        font-size: 15px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+    }
+    .colorG {
+        color: #d74346;
+    }
+    .iconPerson {
+        color: #d74346 !important;
+        margin-right: 5px !important;
+    }
+}
+.tabBar {
+    border-radius: 10px;
+    border: none;
+    background: #1f2026;
+    /* margin: 0 20px 10px 20px; */
+    position: absolute;
+    width: 93%;
+    bottom: 16px;
+    height: 65px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+
+    ion-tab-button {
+        border-radius: 10px !important;
+        --background: #1f2026 !important;
+        --color-selected: #fff;
+    }
+    ion-label {
+        font-family: "Montserrat Bold";
+        margin-top: 5px;
+    }
+}
+@media (min-width: 600px) {
+    .tabBar {
+        width: 50%;
+    }
+}
+ion-toolbar {
+    --background-color: transparent !important;
+    --ion-color-base: transparent !important;
+    --border-width: 0px !important;
+}
+
+.swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-container-horizontal > .swiper-pagination-bullets {
+    // top: -2px !important;
+}
+.swiper-pagination-bullet-active {
+    background: #d03231;
+    width: 13px;
+    height: 13px;
+}
+
+hr {
+    border: 1px solid #d7d8da73;
+    height: 0px;
+    width: 100%;
+    font-size: 2em !important;
+    opacity: 1;
+}
